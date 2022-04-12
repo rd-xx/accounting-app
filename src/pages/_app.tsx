@@ -1,14 +1,15 @@
-import { useEffect } from 'react';
-
-import { I18nProvider } from '@lingui/react';
-import { i18n, Messages } from '@lingui/core';
-import { useRouter } from 'next/router';
-import { en, sv } from 'make-plural/plurals';
 import LangSwitcher from '../components/LangSwitcher';
+import { i18n, Messages } from '@lingui/core';
+import { I18nProvider } from '@lingui/react';
+import { en, sv } from 'make-plural/plurals';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import '../styles/global.css';
 
-i18n.loadLocaleData('en', { plurals: en });
-i18n.loadLocaleData('sv', { plurals: sv });
+i18n.loadLocaleData({
+	en: { plurals: en },
+	sv: { plurals: sv }
+});
 
 // eslint-disable-next-line react/prop-types
 export default function Page({ Component, pageProps }) {
@@ -30,10 +31,8 @@ export default function Page({ Component, pageProps }) {
 
 	return (
 		<I18nProvider i18n={i18n}>
-			<div>
-				<LangSwitcher />
-				<Component {...pageProps} />
-			</div>
+			<LangSwitcher />
+			<Component {...pageProps} />
 		</I18nProvider>
 	);
 }

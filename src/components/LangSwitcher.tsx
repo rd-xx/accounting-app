@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { t } from '@lingui/macro';
+import Link from 'next/link';
 
 const availableLanguageNames = {
 	en: t`English`,

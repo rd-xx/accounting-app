@@ -8,8 +8,8 @@ const availableLanguageNames = {
 };
 
 export default function LangSwitcher() {
-	const { locale, locales, route } = useRouter();
-	const otherLocale = locales?.find((cur) => cur !== locale);
+	const { locale, locales, route } = useRouter(),
+		otherLocale = locales?.find((cur) => cur !== locale);
 
 	return (
 		<Link href={route} locale={otherLocale}>

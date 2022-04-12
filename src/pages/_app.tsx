@@ -13,7 +13,7 @@ export default function Page({ Component, pageProps }) {
   const { locale } = useRouter()
 
   useEffect(() => {
-    async function load(locale) {
+    async function load(locale: string) {
       const { messages } = await import(`../locales/${locale}/messages.po`)
 
       i18n.load(locale, messages)

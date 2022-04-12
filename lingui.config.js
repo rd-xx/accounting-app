@@ -3,7 +3,7 @@ module.exports = {
   sourceLocale: 'en',
   catalogs: [
     {
-      path: '<rootDir>/locale/{locale}/messages',
+      path: '<rootDir>/src/locales/{locale}/messages',
       include: ['<rootDir>/'],
       exclude: ['**/node_modules/**'],
     },

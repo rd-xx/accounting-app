@@ -14,7 +14,7 @@ export default function Page({ Component, pageProps }) {
 
   useEffect(() => {
     async function load(locale) {
-      const { messages } = await import(`../locale/${locale}/messages.po`)
+      const { messages } = await import(`../locales/${locale}/messages.po`)
 
       i18n.load(locale, messages)
       i18n.activate(locale)

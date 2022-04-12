@@ -5,6 +5,7 @@ import { i18n, Messages } from '@lingui/core';
 import { useRouter } from 'next/router';
 import { en, sv } from 'make-plural/plurals';
 import LangSwitcher from '../components/LangSwitcher';
+import '../styles/global.css';
 
 i18n.loadLocaleData('en', { plurals: en });
 i18n.loadLocaleData('sv', { plurals: sv });

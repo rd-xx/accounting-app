@@ -1,14 +1,14 @@
 import LangSwitcher from '../components/LangSwitcher';
 import { i18n, Messages } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
-import { en, sv } from 'make-plural/plurals';
+import { en, fr } from 'make-plural/plurals';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import '../styles/global.css';
 
 i18n.loadLocaleData({
 	en: { plurals: en },
-	sv: { plurals: sv }
+	fr: { plurals: fr }
 });
 
 // eslint-disable-next-line react/prop-types

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const availableLanguageNames = {
 	en: t`English`,
-	sv: t`Swedish`
+	fr: t`French`
 };
 
 export default function LangSwitcher() {

@@ -50,18 +50,21 @@ function ThemeChanger(): JSX.Element {
 }
 
 export default function App({ Component, pageProps }) {
-	const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)'),
+	const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', {
+			noSsr: true
+		}),
 		[mode, setMode] = useState<PaletteMode>(prefersDarkMode ? 'dark' : 'light'),
 		colorMode = useMemo(
 			() => ({
 				// The dark mode switch would invoke this method
 				toggleColorMode: () => {
-					setMode((prevMode: PaletteMode) =>
-						prevMode === 'light' ? 'dark' : 'light'
-					);
+					const newMode = mode === 'light' ? 'dark' : 'light';
+					setMode(newMode);
+					localStorage.setItem('theme', newMode);
+					storedTheme = newMode;
 				}
 			}),
-			[]
+			[mode]
 		),
 		{ locale } = useRouter();
 
@@ -79,8 +82,21 @@ export default function App({ Component, pageProps }) {
 		void load(locale);
 	}, [locale]);
 
+	let storedTheme = '';
 	useEffect(() => {
-		setMode(prefersDarkMode ? 'dark' : 'light');
+		if (storedTheme === '') {
+			storedTheme = localStorage.getItem('theme');
+			if (storedTheme === 'undefined') {
+				storedTheme = prefersDarkMode ? 'dark' : 'light';
+				localStorage.setItem('theme', storedTheme);
+			}
+		}
+
+		const isDark = mode === 'dark',
+			storageWantDark = storedTheme === 'dark',
+			systemWantDark = prefersDarkMode;
+		if (storageWantDark !== isDark) colorMode.toggleColorMode();
+		else if (systemWantDark !== isDark) colorMode.toggleColorMode();
 	}, [prefersDarkMode]);
 
 	// Update the theme only if the mode changes

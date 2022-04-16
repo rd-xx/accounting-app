@@ -48,6 +48,7 @@ function ThemeChanger(): JSX.Element {
 		</div>
 	);
 }
+
 export default function App({ Component, pageProps }) {
 	const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)'),
 		[mode, setMode] = useState<PaletteMode>(prefersDarkMode ? 'dark' : 'light'),
@@ -77,6 +78,10 @@ export default function App({ Component, pageProps }) {
 
 		void load(locale);
 	}, [locale]);
+
+	useEffect(() => {
+		setMode(prefersDarkMode ? 'dark' : 'light');
+	}, [prefersDarkMode]);
 
 	// Update the theme only if the mode changes
 	const theme = useMemo(() => createTheme(getTheme(mode)), [mode]);

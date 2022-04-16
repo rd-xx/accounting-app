@@ -18,6 +18,7 @@
 	"rules": {
 		"one-var": ["warn", "consecutive"],
 		"curly": ["warn", "multi"],
+		"react-hooks/exhaustive-deps": "off",
 		"prettier/prettier": "warn"
 	},
 	"ignorePatterns": ["**/node_modules/**", "*.js"]

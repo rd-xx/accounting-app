@@ -1,5 +1,5 @@
 import { Divider, Stack } from '@mui/material';
-import LangSwitcher from './LangSwitcher';
+import LangSwitcher from './LangChanger';
 import ThemeChanger from './ThemeChanger';
 
 export default function Footer() {

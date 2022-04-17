@@ -1,9 +1,9 @@
-import { Trans } from '@lingui/macro';
+import Footer from '../components/Footer';
 
 export default function Index() {
 	return (
 		<div>
-			<Trans>Hello World.</Trans>
+			<Footer />
 		</div>
 	);
 }

@@ -1,8 +1,5 @@
-import { createContext, useContext, useEffect, useMemo, useState } from 'react';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import LangSwitcher from '../components/LangSwitcher';
-import IconButton from '@mui/material/IconButton';
+import { ColorModeContext } from '../components/ThemeChanger';
+import { useEffect, useMemo, useState } from 'react';
 import { i18n, Messages } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
 import { en, fr } from 'make-plural/plurals';
@@ -15,39 +12,13 @@ import {
 	useMediaQuery,
 	createTheme,
 	CssBaseline,
-	PaletteMode,
-	useTheme
+	PaletteMode
 } from '@mui/material';
 
 i18n.loadLocaleData({
 	en: { plurals: en },
 	fr: { plurals: fr }
 });
-
-// eslint-disable-next-line @typescript-eslint/no-empty-function
-const ColorModeContext = createContext({ toggleColorMode: () => {} });
-
-function ThemeChanger(): JSX.Element {
-	const colorMode = useContext(ColorModeContext),
-		theme = useTheme();
-
-	return (
-		<div>
-			{theme.palette.mode} mode
-			<IconButton
-				sx={{ ml: 1 }}
-				onClick={colorMode.toggleColorMode}
-				color="inherit"
-			>
-				{theme.palette.mode === 'dark' ? (
-					<Brightness7Icon />
-				) : (
-					<Brightness4Icon />
-				)}
-			</IconButton>
-		</div>
-	);
-}
 
 export default function App({ Component, pageProps }) {
 	const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', {
@@ -107,9 +78,7 @@ export default function App({ Component, pageProps }) {
 			<ThemeProvider theme={theme}>
 				<I18nProvider i18n={i18n}>
 					<CssBaseline />
-					<LangSwitcher />
 					<Component {...pageProps} />
-					<ThemeChanger />
 				</I18nProvider>
 			</ThemeProvider>
 		</ColorModeContext.Provider>

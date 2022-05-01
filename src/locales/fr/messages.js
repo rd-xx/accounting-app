@@ -1,1 +1,1 @@
-/*eslint-disable*/module.exports={messages:{"Amount":"Amount","Description":"Description","English":"Anglais","French":"Français","Hello World.":"Bonjour monde.","Income":"Revenu","Outcome":"Dépense","Reset":"Réinitialiser"}};
+/*eslint-disable*/module.exports={messages:{"Amount":"Montant","Description":"Description","English":"Anglais","French":"Français","Hello World.":"Bonjour monde.","INCOME":"REVENU","Income":"Revenu","OUTCOME":"DÉPENSE","Outcome":"Dépense","Reset":"Réinitialiser","TOTAL INCOME":"REVENUS TOTAUX","TOTAL OUTCOME":"DÉPENSES TOTALES"}};

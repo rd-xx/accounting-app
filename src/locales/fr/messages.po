@@ -33,17 +33,17 @@ msgstr "Description"
 #~ msgid "Hello World."
 #~ msgstr "Bonjour monde."
 
-#: src/components/Table.tsx:16
+#: src/components/Table.tsx:27
 msgid "INCOME"
-msgstr ""
+msgstr "REVENU"
 
 #: src/components/Header.tsx:50
 msgid "Income"
 msgstr "Revenu"
 
-#: src/components/Table.tsx:21
+#: src/components/Table.tsx:32
 msgid "OUTCOME"
-msgstr ""
+msgstr "DÉPENSE"
 
 #: src/components/Header.tsx:58
 msgid "Outcome"
@@ -53,6 +53,10 @@ msgstr "Dépense"
 msgid "Reset"
 msgstr "Réinitialiser"
 
-#: src/components/ThemeChanger.tsx:63
-msgid "{0} mode"
-msgstr "Mode {0}"
+#: src/components/Table.tsx:188
+msgid "TOTAL INCOME"
+msgstr "REVENUS TOTAUX"
+
+#: src/components/Table.tsx:196
+msgid "TOTAL OUTCOME"
+msgstr "DÉPENSES TOTALES"

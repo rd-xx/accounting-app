@@ -2,7 +2,6 @@ import { styled, useTheme } from '@mui/material/styles';
 import { createContext, useContext } from 'react';
 import Switch from '@mui/material/Switch';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-function
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 export default function ThemeChanger(): JSX.Element {

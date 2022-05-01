@@ -1,5 +1,5 @@
-import { grey } from '@mui/material/colors';
 import { PaletteMode } from '@mui/material';
+import { grey } from '@mui/material/colors';
 
 export default function getTheme(mode: PaletteMode) {
 	return {
@@ -7,18 +7,23 @@ export default function getTheme(mode: PaletteMode) {
 			mode,
 			...(mode === 'light'
 				? {
-						primary: grey,
+						primary: {
+							main: '#000'
+						},
+						secondary: {
+							main: grey[900]
+						},
 						text: {
-							primary: grey[900],
-							secondary: grey[800]
+							primary: '#000',
+							secondary: grey[500]
 						}
 				  }
 				: {
 						primary: {
-							main: '#202020'
+							main: '#2B2B2B'
 						},
 						secondary: {
-							main: '#880e4f'
+							main: grey[400]
 						},
 						background: {
 							default: '#202020'

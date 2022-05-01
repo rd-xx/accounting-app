@@ -5,7 +5,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
-"Language: en\n"
+"Language: fr\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: \n"
@@ -15,7 +15,7 @@ msgstr ""
 
 #: src/components/Header.tsx:21
 msgid "Amount"
-msgstr "Amount"
+msgstr "Montant"
 
 #: src/components/Header.tsx:41
 msgid "Description"
@@ -23,36 +23,36 @@ msgstr "Description"
 
 #: src/components/LangSwitcher.tsx:6
 #~ msgid "English"
-#~ msgstr "English"
+#~ msgstr "Anglais"
 
 #: src/components/LangSwitcher.tsx:7
 #~ msgid "French"
-#~ msgstr "French"
+#~ msgstr "Français"
 
 #: src/pages/index.tsx:6
 #~ msgid "Hello World."
-#~ msgstr "Hello World."
+#~ msgstr "Bonjour monde."
 
 #: src/components/Table.tsx:16
 msgid "INCOME"
-msgstr "INCOME"
+msgstr ""
 
 #: src/components/Header.tsx:50
 msgid "Income"
-msgstr "Income"
+msgstr "Revenu"
 
 #: src/components/Table.tsx:21
 msgid "OUTCOME"
-msgstr "OUTCOME"
+msgstr ""
 
 #: src/components/Header.tsx:58
 msgid "Outcome"
-msgstr "Outcome"
+msgstr "Dépense"
 
 #: src/components/Header.tsx:66
 msgid "Reset"
-msgstr "Reset"
+msgstr "Réinitialiser"
 
 #: src/components/ThemeChanger.tsx:63
 msgid "{0} mode"
-msgstr "{0} mode"
+msgstr "Mode {0}"
